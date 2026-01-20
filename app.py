@@ -52,9 +52,17 @@ def norm(t):
     return ''.join(c for c in unicodedata.normalize('NFD', t.lower()) if unicodedata.category(c) != 'Mn')
 
 KB = [
- {'tema':'violencia domestica','texto':'Priorizar segurança da vítima, Lei Maria da Penha, medidas protetivas, preservação de evidências.'},
- {'tema':'homicidio','texto':'Isolar local, preservar vestígios, acionar perícia, identificar testemunhas.'},
- {'tema':'ameaca','texto':'Registrar circunstâncias, avaliar risco, preservar mensagens.'},
+    {
+        "tema": "preservacao de local",
+        "texto": "Em ocorrências com risco à vida ou crime grave, orientar a preservação do local e acionar equipe competente. Evitar contaminação de vestígios."
+    },
+    {'tema':'violencia domestica','texto':'Priorizar segurança da vítima, Lei Maria da Penha, medidas protetivas, preservação de evidências.'},
+    {
+        "tema": "estelionato",
+        "texto": "Coletar evidências digitais (comprovantes, prints, contas), orientar preservação de registros e canais formais para bloqueio/contestação quando aplicável."
+    },
+    {'tema':'homicidio','texto':'Isolar local, preservar vestígios, acionar perícia, identificar testemunhas.'},
+    {'tema':'ameaca','texto':'Registrar circunstâncias, avaliar risco, preservar mensagens.'},
 ]
 
 def recuperar_rag(pergunta):
